@@ -1,84 +1,65 @@
-# node-lib-starter
+# specifier-backward
 
-开箱即用的 `node` 库模板
-
-<br />
-
-## features 🦕
-
-- [pnpm](https://github.com/pnpm/pnpm)
-- [udeno](https://github.com/dishait/udeno)
-- [vitest](https://github.com/vitest-dev/vitest)
-- [unbuild](https://github.com/unjs/unbuild)
-- [TypeScript](https://github.com/microsoft/TypeScript)
+"node:any" to "any"
 
 <br />
-<br />
 
-## Usage 🦖
+## Usage
 
 ### install
 
 ```shell
-pnpm i
+npm i specifier-backward -D
 ```
 
-### test
+### vite
 
-```shell
-pnpm test
+```ts
+// vite.config.ts
+import { vitePlugin } from 'specifier-backward'
 
-# or pnpm test:watch
+export default {
+	plugins: [vitePlugin()]
+}
 ```
 
-### build
+### rollup
 
-```shell
-pnpm build
+```ts
+// rollup.config.ts
+import { rollupPlugin } from 'specifier-backward'
 
-# pnpm build:stub 打包插桩
-# pnpm build:udeno 打包 deno 包
-# pnpm build:esm 仅打包 esmodule
-# pnpm build:cjs 仅打包 commonjs
+export default {
+	plugins: [rollupPlugin()]
+}
 ```
 
-### coverage
+### webpack
 
-```shell
-pnpm coverage
+```ts
+// webpack.config.ts
+import { webpackPlugin } from 'specifier-backward'
+
+export default {
+	plugins: [webpackPlugin()]
+}
 ```
 
-### dev
+### esbuild
 
-```shell
-pnpm dev
+```ts
+import { build } from 'esbuild'
+import { esbuildPlugin } from 'specifier-backward'
+
+build({
+	plugins: [esbuildPlugin()]
+})
 ```
 
-### release
-
-```shell
-pnpm release
-```
-
-### play
-
-```shell
-pnpm play
-```
-
-### play
-
-```shell
-pnpm play
-```
-
-<br />
 <br />
 
 ## License
 
-Made with [name](https://github.com/name)
+Made with [markthree](https://github.com/markthree)
 
 Published under [MIT License](./LICENSE).
-
-<br />
