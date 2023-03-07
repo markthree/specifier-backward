@@ -8,6 +8,10 @@ function transformInclude(id: string) {
 export const unplugin = createUnplugin(() => {
 	return {
 		name: 'unplugin-specifier-backward',
+		enforce: 'post',
+		vite: {
+			apply: 'build'
+		},
 		transformInclude(id) {
 			return transformInclude(id)
 		},
