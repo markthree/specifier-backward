@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "specifier-backward",
   "description": "'node:any' to 'any'",
   "main": "./dist/index.cjs",
