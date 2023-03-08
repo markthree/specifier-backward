@@ -12,7 +12,7 @@
 
 ## Motivation
 
-To be compatible with the old version of node 👉 [Error: Cannot find module 'node:buffer'](https://github.com/markthree/go-get-folder-size/issues/2)
+兼容老版本 `node` 👉 [Error: Cannot find module 'node:buffer'](https://github.com/markthree/go-get-folder-size/issues/2)
 
 <br />
 
